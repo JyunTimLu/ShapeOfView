@@ -2,6 +2,9 @@ package com.github.florent37.shapeofview.shapes;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
@@ -10,6 +13,7 @@ import com.github.florent37.shapeofview.R;
 import com.github.florent37.shapeofview.ShapeOfView;
 import com.github.florent37.shapeofview.manager.ClipPathManager;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -21,6 +25,13 @@ public class CutCornerView extends ShapeOfView {
     private float topRightCutSizePx = 0f;
     private float bottomRightCutSizePx = 0f;
     private float bottomLeftCutSizePx = 0f;
+
+    private float borderWidthPx = 10f;
+
+    @ColorInt
+    private int borderColor = Color.GRAY;
+
+    private final Paint borderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public CutCornerView(@NonNull Context context) {
         super(context);
@@ -58,6 +69,21 @@ public class CutCornerView extends ShapeOfView {
                 return false;
             }
         });
+    }
+
+    @Override
+    protected void dispatchDraw(Canvas canvas) {
+        super.dispatchDraw(canvas);
+
+        if(borderWidthPx > 0){
+            borderPaint.setStrokeWidth(borderWidthPx);
+            borderPaint.setColor(borderColor);
+
+            canvas.drawLine(0, rectF.top - topLeftCutSizePx, rectF.left + topLeftCutSizePx, 0, borderPaint);
+
+
+//            canvas.drawCircle(getWidth()/2f, getHeight()/2f, Math.min((getWidth() - borderWidthPx) /2f, (getHeight() - borderWidthPx) /2f), borderPaint);
+        }
     }
 
     private Path generatePath(RectF rect, float topLeftDiameter, float topRightDiameter, float bottomRightDiameter, float bottomLeftDiameter) {

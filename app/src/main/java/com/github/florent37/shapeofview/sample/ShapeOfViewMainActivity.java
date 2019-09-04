@@ -15,48 +15,48 @@ public class ShapeOfViewMainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.anim)
-    public void onAnimClicked() {
-        startActivity(new Intent(this, ShapeOfViewAnimationActivity.class));
-    }
-
-    @OnClick(R.id.jackman)
-    public void onJackmanClicked() {
-        startActivity(new Intent(this, JackmanActivity.class));
-    }
-
-    @OnClick(R.id.star)
-    public void onStarClicked() {
-        startActivity(new Intent(this, ShapeOfViewStarActivity.class));
-    }
-
-    @OnClick(R.id.round)
-    public void onRoundClicked() {
-        startActivity(new Intent(this, ShapeOfViewRoundActivity.class));
-    }
-
-    @OnClick(R.id.star_wars)
-    public void onStarWarsClicked() {
-        startActivity(new Intent(this, StarWarsActivity.class));
-    }
-
-    @OnClick(R.id.star_wars_animated)
-    public void onStarWarsAnimatedClicked() {
-        startActivity(new Intent(this, ShapeOfViewStarAnimatedActivity.class));
-    }
-
-    @OnClick(R.id.shrine)
-    public void onShrineClicked() {
-        startActivity(new Intent(this, MaterialDesignShrineActivity.class));
-    }
-
-    @OnClick(R.id.shapes)
-    public void onShapesClicked() {
-        startActivity(new Intent(this, ShapeOfViewStarActivity.class));
-    }
-
-    @OnClick(R.id.dottedEdges)
-    public void onDottedEdgesClicked() {
-        startActivity(new Intent(this, DottedEdgesActivity.class));
-    }
+//    @OnClick(R.id.anim)
+//    public void onAnimClicked() {
+//        startActivity(new Intent(this, ShapeOfViewAnimationActivity.class));
+//    }
+//
+//    @OnClick(R.id.jackman)
+//    public void onJackmanClicked() {
+//        startActivity(new Intent(this, JackmanActivity.class));
+//    }
+//
+//    @OnClick(R.id.star)
+//    public void onStarClicked() {
+//        startActivity(new Intent(this, ShapeOfViewStarActivity.class));
+//    }
+//
+//    @OnClick(R.id.round)
+//    public void onRoundClicked() {
+//        startActivity(new Intent(this, ShapeOfViewRoundActivity.class));
+//    }
+//
+//    @OnClick(R.id.star_wars)
+//    public void onStarWarsClicked() {
+//        startActivity(new Intent(this, StarWarsActivity.class));
+//    }
+//
+//    @OnClick(R.id.star_wars_animated)
+//    public void onStarWarsAnimatedClicked() {
+//        startActivity(new Intent(this, ShapeOfViewStarAnimatedActivity.class));
+//    }
+//
+//    @OnClick(R.id.shrine)
+//    public void onShrineClicked() {
+//        startActivity(new Intent(this, MaterialDesignShrineActivity.class));
+//    }
+//
+//    @OnClick(R.id.shapes)
+//    public void onShapesClicked() {
+//        startActivity(new Intent(this, ShapeOfViewStarActivity.class));
+//    }
+//
+//    @OnClick(R.id.dottedEdges)
+//    public void onDottedEdgesClicked() {
+//        startActivity(new Intent(this, DottedEdgesActivity.class));
+//    }
 }
